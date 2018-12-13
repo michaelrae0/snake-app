@@ -1,0 +1,62 @@
+body {
+  background-color: #242421;
+}
+.viewport {
+  background-color: #242421;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 25%;
+  left: 35%;
+  font-size: 0;
+  border: 8px ridge #00D00F
+}
+.snakepiece {
+  background-color: #242421;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: -10px;
+  float: left;
+  border: 1px;
+  border-style: solid;
+  border-color: #00D00F;
+  border-radius: 8px
+}
+.apple {
+  background-color: #292421;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: -12px;
+  float: left;
+  border: 2px;
+  border-style: solid;
+  border-color: #00D00F;
+  border-radius: 10px
+}
+.scoreboard {
+  color: #00D00F;
+  font-size: 40px;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  float: left;
+}
+.halfboard {
+  float: left;
+  text-align: center;
+  border: 5px ridge #5cce2e;
+}
+.score {
+  border-right: 0px
+}
+.board-word {
+  padding: 0px 10px;
+  border-bottom: 5px ridge #5cce2e;
+}
+/* Prevents blue line around div when clicked on */
+*:focus {
+  outline: 0;
+  outline: none;
+  }
