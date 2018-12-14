@@ -1,13 +1,13 @@
 {
-  "main.css": "/snake-app/static/css/main.4ea050c0.chunk.css",
-  "main.js": "/snake-app/static/js/main.3c111981.chunk.js",
-  "main.js.map": "/snake-app/static/js/main.3c111981.chunk.js.map",
+  "main.css": "/snake-app/static/css/main.c63504cb.chunk.css",
+  "main.js": "/snake-app/static/js/main.201dc827.chunk.js",
+  "main.js.map": "/snake-app/static/js/main.201dc827.chunk.js.map",
   "static/js/1.b61f9f0b.chunk.js": "/snake-app/static/js/1.b61f9f0b.chunk.js",
   "static/js/1.b61f9f0b.chunk.js.map": "/snake-app/static/js/1.b61f9f0b.chunk.js.map",
   "runtime~main.js": "/snake-app/static/js/runtime~main.85f93124.js",
   "runtime~main.js.map": "/snake-app/static/js/runtime~main.85f93124.js.map",
-  "static/css/main.4ea050c0.chunk.css.map": "/snake-app/static/css/main.4ea050c0.chunk.css.map",
+  "static/css/main.c63504cb.chunk.css.map": "/snake-app/static/css/main.c63504cb.chunk.css.map",
   "index.html": "/snake-app/index.html",
-  "precache-manifest.b3666669a85e9942809d8ea170348a47.js": "/snake-app/precache-manifest.b3666669a85e9942809d8ea170348a47.js",
+  "precache-manifest.eb239770a0b9fe6226cb4913307ad849.js": "/snake-app/precache-manifest.eb239770a0b9fe6226cb4913307ad849.js",
   "service-worker.js": "/snake-app/service-worker.js"
 }
