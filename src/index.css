@@ -4,37 +4,24 @@ body {
 .viewport {
   background-color: #1b1a1a;
   position: absolute;
-  width: 400px;
-  height: 400px;
-  top: 25%;
-  left: 35%;
   font-size: 0;
   border: 8px ridge #00D00F;
-  /* float: left */
 }
 .snakepiece {
   background-color: #1b1a1a;
   position: relative;
-  width: 28px;
-  height: 28px;
-  margin: -15px;
   float: left;
   border: 1px;
   border-style: solid;
-  border-color: #00D00F;
-  border-radius: 12px
+  border-color: #00D00F
 }
 .apple {
   background-color: #1b1a1a;
   position: relative;
-  width: 26px;
-  height: 26px;
-  margin: -17px;
   float: left;
   border: 2px;
   border-style: solid;
-  border-color: #00D00F;
-  border-radius: 15px
+  border-color: #00D00F
 }
 .scoreboard {
   color: #00D00F;
@@ -43,7 +30,6 @@ body {
   float: left;
 }
 .halfboard {
-  width: 198px;
   float: left;
   text-align: center;
   border: 5px ridge #5cce2e;
