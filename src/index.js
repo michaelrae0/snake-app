@@ -14,7 +14,7 @@ class Game extends React.Component {
       ax: Math.floor( Math.random()*20 ),
       ay: Math.floor( Math.random()*20 ),
       xv: 0,
-      yv: -1,
+      yv: 0,
       invStartDir: "down",
       score: 0,
       highScore: 0,
@@ -24,7 +24,7 @@ class Game extends React.Component {
         {sx: 10, sy: 12, id: 3},
         {sx: 10, sy: 13, id: 2},
         {sx: 10, sy: 14, id: 1}
-      ]
+      ],
     }
   }
   
@@ -66,7 +66,7 @@ class Game extends React.Component {
               {sx: 10, sy: 14, id: 4}
             ],
             xv: 0,
-            yv: -1,
+            yv: 0,
             highScore: newScore,
             score: 0,
           })
@@ -145,17 +145,57 @@ class Game extends React.Component {
   }
 
   render() {
+    let clientHeight = document.documentElement.clientHeight,
+        clientWidth = document.documentElement.clientWidth,
+        viewHeight = 0,
+        viewWidth = 0,
+        distRatio = 0;
+    if (clientWidth >= clientHeight) {
+      viewHeight = clientHeight*2/3;
+      viewWidth = viewHeight;
+      distRatio = viewHeight / 20;
+    } else {
+      viewWidth = clientWidth*2/3;
+      viewHeight=viewWidth;
+      distRatio = viewWidth / 20
+    }
+    let pixPar = { // pixelParameters
+        clientHeight,
+        clientWidth,
+        viewBorder: 8,
+        viewWidth,
+        viewHeight,
+        distRatio, // viewHeight / game squares
+      };
+      
     return (
       <div>
-        <Score value={this.state.score} index={this.state.highScore} />
-        <div className="border">
-          <div className="viewport" onKeyDown={this.handleKeyPress} tabIndex="0">
-            <Snake value={this.state.locations} />
-            <Apple 
-              value={this.state.ax}
-              index={this.state.ay}
-            />
-          </div>
+        <Score
+          className
+          value={this.state.score}
+          index={this.state.highScore}
+          itemprop={pixPar}
+        />
+        <div
+          className="viewport"
+          onKeyDown={this.handleKeyPress}
+          tabIndex="0"
+          style={{
+            width: pixPar.viewWidth,
+            height: pixPar.viewHeight,
+            top: (pixPar.clientHeight	- pixPar.viewHeight - pixPar.viewBorder*2 + 116) / 2 + 'px',
+            left: (pixPar.clientWidth	- pixPar.viewWidth - pixPar.viewBorder*2) / 2 + 'px'
+          }}
+        >
+          <Snake
+            value={this.state.locations}
+            itemprop={pixPar}
+          />
+          <Apple 
+            value={this.state.ax}
+            index={this.state.ay}
+            itemprop={pixPar}
+          />
         </div>
       </div>
     )
