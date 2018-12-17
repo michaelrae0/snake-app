@@ -2,9 +2,13 @@ body {
   background-color: rgb(233, 227, 227);
 }
 .viewport {
-  background-color: #1b1a1a;
   position: absolute;
-  font-size: 0;
+  background-color: red
+}
+.game {
+  background-color: #1b1a1a;
+  position: relative;
+  /* float:left; */
   border: 8px ridge #00D00F;
 }
 .snakepiece {
@@ -26,7 +30,7 @@ body {
 .scoreboard {
   color: #00D00F;
   background-color: #1b1a1a;
-  position: absolute;
+  position: relative;
   float: left;
 }
 .halfboard {
@@ -36,6 +40,9 @@ body {
 }
 .board-word {
   border-bottom: 5px ridge #5cce2e;
+}
+.board-num {
+  font-size: 45px
 }
 /* Prevents blue line around div when clicked on */
 *:focus {
