@@ -41,14 +41,14 @@ class Game extends React.Component {
 
   setDimensions = () => {
     let gameWidth = 500,
-    gameHeight = gameWidth,
-    gameBorder = 8,
-    scoreBorder = 5,
-    scoreHeight = 110,
-    scoreWidth = (gameWidth + gameBorder*2) - (scoreBorder*4),
-    distRatio = gameWidth /20,
-    viewTop = (document.documentElement.clientHeight - (gameHeight + gameBorder*2 + scoreHeight + scoreBorder*3))/2,
-    viewLeft = (document.documentElement.clientWidth - (gameWidth + gameBorder*2))/2
+        gameHeight = gameWidth,
+        gameBorder = 8,
+        scoreBorder = 5,
+        scoreHeight = 110,
+        scoreWidth = (gameWidth + gameBorder*2) - (scoreBorder*4),
+        distRatio = gameWidth /20,
+        viewTop = (document.documentElement.clientHeight - (gameHeight + gameBorder*2 + scoreHeight + scoreBorder*3))/2,
+        viewLeft = (document.documentElement.clientWidth - (gameWidth + gameBorder*2))/2
 
     let dimensions = {
       gameWidth,

@@ -6,7 +6,7 @@ class Snake extends React.Component {
     const snake = this.props.locations.map((location, index) => {
       return(
       <div 
-        key={location.id} 
+        key={index} 
         className="snakepiece" 
         style={{
           width: this.props.dims.distRatio - 2 + 'px',
