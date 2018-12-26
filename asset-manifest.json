@@ -1,13 +1,14 @@
 {
-  "main.css": "/snake-app/static/css/main.08d2a701.chunk.css",
-  "main.js": "/snake-app/static/js/main.ae19c24b.chunk.js",
-  "main.js.map": "/snake-app/static/js/main.ae19c24b.chunk.js.map",
+  "main.css": "/snake-app/static/css/main.54057ca3.chunk.css",
+  "main.js": "/snake-app/static/js/main.ee4ceb77.chunk.js",
+  "main.js.map": "/snake-app/static/js/main.ee4ceb77.chunk.js.map",
   "static/js/1.4d4949a9.chunk.js": "/snake-app/static/js/1.4d4949a9.chunk.js",
   "static/js/1.4d4949a9.chunk.js.map": "/snake-app/static/js/1.4d4949a9.chunk.js.map",
   "runtime~main.js": "/snake-app/static/js/runtime~main.85f93124.js",
   "runtime~main.js.map": "/snake-app/static/js/runtime~main.85f93124.js.map",
-  "static/css/main.08d2a701.chunk.css.map": "/snake-app/static/css/main.08d2a701.chunk.css.map",
+  "static/media/index.css": "/snake-app/static/media/gray-pattern.93157b90.jpg",
+  "static/css/main.54057ca3.chunk.css.map": "/snake-app/static/css/main.54057ca3.chunk.css.map",
   "index.html": "/snake-app/index.html",
-  "precache-manifest.59c76c663d37698b9b4454d37f4ba67d.js": "/snake-app/precache-manifest.59c76c663d37698b9b4454d37f4ba67d.js",
+  "precache-manifest.ce14c7ae97fdde0087924672cc677ee2.js": "/snake-app/precache-manifest.ce14c7ae97fdde0087924672cc677ee2.js",
   "service-worker.js": "/snake-app/service-worker.js"
 }
