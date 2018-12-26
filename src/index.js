@@ -39,6 +39,8 @@ class Game extends React.Component {
     }
   }
 
+
+  // Game Dimensions
   setDimensions = () => {
     let gameWidth = 500,
         gameHeight = gameWidth,
@@ -67,9 +69,11 @@ class Game extends React.Component {
     return dimensions;
   }
 
+  // Spawn Functions
   spawnApple = location => {
     let applex = Math.floor( Math.random() * 20);
     let appley = Math.floor( Math.random() * 20);
+    
     // Prevent spawning on snake
     for (let i = 0; i < location.length; i++) {
       if (applex === location[i].sx && appley === location[i].sy) {
@@ -83,19 +87,21 @@ class Game extends React.Component {
       ay: appley
     })
   }
+
+  // Collision Tests
   appleCollision = location => {
     if (
       location[0].sx === (this.state.ax) &&
       location[0].sy === (this.state.ay)
       ) {
-      this.spawnApple(location);
       // New apple and score++
+      this.spawnApple(location);
       var increment = this.state.score + 1;
       this.setState({
         score: increment
       });
     }
-    else { // delete tail piece if apple isn't eaten
+    else { // pop tail piece if apple isn't eaten
       location.pop(location.length - 1)
     }
 
@@ -134,6 +140,8 @@ class Game extends React.Component {
       }
     }
   }
+
+  // Movement Functions
   setInverseDir = () => {
     // Sets the inverse direction so snake can't turn into itself
     if (this.state.yv === -1) this.setState({ invStartDir: "down" });
@@ -148,21 +156,23 @@ class Game extends React.Component {
       sy: location[0].sy + this.state.yv,
       id: location[0].id + 1
     };
+
     location.unshift(obj);
     return location;
   }
 
-  // Calculations for every new frame
+
+  // Functions for every new frame
   nextFrame = () => {
+    // Update dimensions if screen size changes
+    let dimensions = this.setDimensions();
+    
     // Update location
     let locals = this.state.locations;
     locals = this.moveSnake(locals);
 
-    // Update dimensions if screen size changes
-    let dimensions = this.setDimensions();
 
-    // Collision tests
-      // if there is collision, skip rest of fnc
+    // if there is collision, skip rest of fnc
     if (this.bodyWallCollisions(locals)) return;
 
     // Apple eating test
@@ -174,12 +184,17 @@ class Game extends React.Component {
       dimensions
     });
   }
+  
+  // Lifecycle Methods
   componentDidMount = () => {
+    // game renders 10 frames a second
     this.intervalId = setInterval(this.nextFrame, 1000/10);
   }
   componentWillUnmount() {
     clearInterval(this.intervalId);
   }
+
+  // Controls
   handleKeyPress = event => {
     if ((event.keyCode === 37) || (event.key === "a")) {
       if (this.state.invStartDir !== "left"){
@@ -211,6 +226,7 @@ class Game extends React.Component {
       }
     }
   }
+
 
   render() {
     return (

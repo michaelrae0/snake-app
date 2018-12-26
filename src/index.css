@@ -1,9 +1,12 @@
 body {
-  background-color: rgb(233, 227, 227);
+  background-image: url(./gray-pattern.jpg);
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
 }
 .viewport {
   position: absolute;
-  background-color: red
+  
 }
 .game {
   background-color: #1b1a1a;
