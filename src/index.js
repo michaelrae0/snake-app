@@ -76,6 +76,7 @@ class Game extends React.Component {
     
     // Prevent spawning on snake
     for (let i = 0; i < location.length; i++) {
+      // If collision
       if (applex === location[i].sx && appley === location[i].sy) {
         applex = Math.floor( Math.random()*20 );
         appley = Math.floor( Math.random()*20 );
